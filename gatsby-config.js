@@ -29,7 +29,9 @@ module.exports = {
         repositoryName: process.env.PRISMIC_REPO,
         accessToken: process.env.PRISMIC_ACCESS_KEY,
         linkResolver: () => (doc) => linkResolver(doc),
-        schemas: {},
+        schemas: {
+          blogPost: require("./custom_types/blog_post.json"),
+        },
       },
     },
   ],
