@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+/*
+  Page Structure
+*/
+body {
+  background-color: $c-background1;
+  color: $c-text;
+  font-family: $f-primary;
+  font-size: 16px;
+  letter-spacing: 0.4;
+  box-sizing: border-box;
+}
+main {
+  padding-top: 20px;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  max-width: 980px;
+  margin: auto;
+}
+section {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+/*
+  Text
+*/
+h1 {
+    font-family: $f-primary;
+    font-size: 30px;
+    font-weight: bold;
+    color: $c-heading1;
+    letter-spacing: 1.14;
+  }
+  h3 {
+    font-family: f-primary;
+    font-size: 20px;
+    color: $c-heading1;
+    letter-spacing: 1.14;
+  }
+  p {
+    margin: 0px 0px 0px 0px;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 18px;
+  }
+  p a {
+    color: $c-link;
+  }
