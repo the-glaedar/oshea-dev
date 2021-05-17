@@ -1,0 +1,147 @@
+{
+    "Main" : {
+      "uid" : {
+        "type" : "UID",
+        "config" : {
+          "label" : "uid",
+          "placeholder" : "/"
+        }
+      },
+      "intro" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading6",
+          "label" : "Intro",
+          "placeholder" : "Hamish O'Shea | IT Consultant"
+        }
+      },
+      "intro_tagline" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+          "label" : "Intro Tagline",
+          "placeholder" : "Designing clever solutions for complex modern problems."
+        }
+      },
+      "introimage" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 1200,
+            "height" : 1200
+          },
+          "thumbnails" : [ {
+            "name" : "mobile",
+            "width" : 300,
+            "height" : 300
+          } ],
+          "label" : "IntroImage"
+        }
+      },
+      "services_tagline" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+          "label" : "Services Tagline",
+          "placeholder" : "What can I do for you?"
+        }
+      },
+      "portfolio_title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+          "label" : "Portfolio Title",
+          "placeholder" : "What have I done in the past?"
+        }
+      },
+      "portfolio_tagline" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+          "label" : "Portfolio Tagline",
+          "placeholder" : "Interested in working with me? Below you can find an overview of my previous work, as well as a summary of what is yet to come."
+        }
+      },
+      "body" : {
+        "type" : "Slices",
+        "fieldset" : "Slice zone",
+        "config" : {
+          "labels" : {
+            "service" : [ ],
+            "test" : [ ],
+            "portfolio_items" : [ ],
+            "services" : [ ]
+          },
+          "choices" : {
+            "portfolio_items" : {
+              "type" : "Slice",
+              "fieldset" : "Portfolio Items",
+              "description" : "Work & projects.",
+              "icon" : "timeline",
+              "display" : "grid",
+              "non-repeat" : {
+                "work_image" : {
+                  "type" : "Image",
+                  "config" : {
+                    "constraint" : {
+                      "width" : 960,
+                      "height" : 550
+                    },
+                    "thumbnails" : [ {
+                      "name" : "mobile",
+                      "width" : 480,
+                      "height" : 250
+                    } ],
+                    "label" : "Work Image"
+                  }
+                },
+                "internal_link" : {
+                  "type" : "Link",
+                  "config" : {
+                    "allowTargetBlank" : true,
+                    "label" : "Internal Link",
+                    "placeholder" : "/kpmg"
+                  }
+                }
+              },
+              "repeat" : { }
+            },
+            "services" : {
+              "type" : "Slice",
+              "fieldset" : "Services",
+              "description" : "Services offered.",
+              "icon" : "attach_money",
+              "display" : "grid",
+              "non-repeat" : {
+                "service_title" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "single" : "heading2, heading3, heading4, heading5, heading6",
+                    "label" : "Service Title",
+                    "placeholder" : "Set your business up for success"
+                  }
+                },
+                "service_text" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                    "label" : "Service Text",
+                    "placeholder" : "Get your business set up with the tools you need to succeed."
+                  }
+                },
+                "internal_link" : {
+                  "type" : "Link",
+                  "config" : {
+                    "allowTargetBlank" : true,
+                    "label" : "Internal Link",
+                    "placeholder" : "/for-small-business"
+                  }
+                }
+              },
+              "repeat" : { }
+            }
+          }
+        }
+      }
+    }
+  }

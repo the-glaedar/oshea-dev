@@ -31,6 +31,7 @@ module.exports = {
         linkResolver: () => (doc) => linkResolver(doc),
         schemas: {
           blogPost: require("./custom_types/blog_post.json"),
+          index: require("./custom_types/index.json")
         },
       },
     },
@@ -44,5 +45,6 @@ module.exports = {
         display: "swap",
       },
     },
+    "gatsby-plugin-sass",
   ],
 };

@@ -1,35 +1,67 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import * as styles from "/src/styles/page/index.module.scss";
 
-export const HomepageTemplate = ({ data }) => {
-  if (!data) return null;
-  const document = data.allPrismicHomepage.edges[0].node.data;
+// Components
+import Layout from "../components/layout.js";
+import Nav from "../components/nav.js";
 
-  return (
-    <section>
-      <h1>{document.IntroTagline}</h1>
-    </section>
-  );
-};
-
-export const query = graphql`
-  query MyQuery {
-    allPrismicHome {
-      edges {
-        node {
-          data {
-            introline {
-              text
-            }
-            introtagline {
-              text
+export default function Index() {
+  const query = useStaticQuery(graphql`
+    {
+      prismicHome {
+        data {
+          intro_tagline {
+            text
+          }
+          body {
+            primary {
+              internal_link {
+                link_type
+              }
+              service_text {
+                text
+              }
+              service_title {
+                text
+              }
             }
           }
-          url
+          intro {
+            text
+          }
+          introimage {
+            dimensions {
+              width
+              height
+            }
+            mobile {
+              dimensions {
+                height
+                width
+              }
+            }
+          }
+          portfolio_tagline {
+            text
+          }
+          portfolio_title {
+            text
+          }
+          services_tagline {
+            text
+          }
         }
       }
     }
-  }
-`;
+  `)["prismicHome"]["data"];
 
-export default HomepageTemplate;
+  return (
+    <Layout>
+      <section className={styles.intro}>
+        <pre>{query.intro[0].text}</pre>
+        <h1>{query.intro_tagline[0].text}</h1>
+      </section>
+    </Layout>
+  );
+}
